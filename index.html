@@ -1,36 +1,458 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light" data-lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Seu Nome - Data Scientist</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mateus Marques Pinto — Engenheiro Eletricista | Portfólio profissional" />
+    <meta name="author" content="Mateus Marques Pinto" />
+    <title>Mateus Marques Pinto — Engenheiro Eletricista</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Olá, sou Seu Nome</h1>
-        <p>Data Scientist no Setor Elétrico | Especialista em Time Series & ML</p>
+    <!-- ===== SKIP LINK (Acessibilidade) ===== -->
+    <a href="#main" class="skip-link" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o
+        conteúdo</a>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#home" class="header__logo">MMP<span class="accent-dot">.</span></a>
+
+            <nav class="header__nav" id="nav" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active" data-pt="Início" data-en="Home">Início</a></li>
+                    <li><a href="#about" class="nav__link" data-pt="Sobre" data-en="About">Sobre</a></li>
+                    <li><a href="#skills" class="nav__link" data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
+                    <li><a href="#projects" class="nav__link" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+                    <li><a href="#resume" class="nav__link" data-pt="Currículo" data-en="Resume">Currículo</a></li>
+                    <li><a href="#contact" class="nav__link" data-pt="Contato" data-en="Contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <!-- Language Toggle -->
+                <button class="btn-icon" id="langToggle" aria-label="Toggle language" title="PT / EN">
+                    <span class="lang-label">EN</span>
+                </button>
+                <!-- Theme Toggle -->
+                <button class="btn-icon" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+                <!-- Mobile Menu Toggle -->
+                <button class="btn-icon hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
     </header>
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>Expert em forecasting com Darts/TCN, regulação ANEEL/ONS. Projetos em Python, Jupyter.</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python, Darts, TCNs</li>
-            <li>Time Series Forecasting</li>
-            <li>Regulação Elétrica Brasileira</li>
-        </ul>
-        <p>Teste de update: $(date)</p>
-    </section>
-    <section id="projects">
-        <h2>Projetos</h2>
-        <ul>
-            <li><a href="projeto1.html">Previsão Carga Elétrica</a></li>
-        </ul>
-    </section>
-    <footer>
-        <a href="https://github.com/seuuser">GitHub</a> | <a href="cv.pdf">CV</a> | LinkedIn
+
+    <!-- ===== MAIN ===== -->
+    <main id="main">
+
+        <!-- ===== HERO ===== -->
+        <section class="section hero" id="home">
+            <div class="container hero__inner">
+                <div class="hero__text animate-on-scroll">
+                    <p class="hero__greeting" data-pt="Olá, eu sou" data-en="Hi, I'm">Olá, eu sou</p>
+                    <h1 class="hero__name">Mateus Marques Pinto</h1>
+                    <h2 class="hero__title" data-pt="Engenheiro Eletricista" data-en="Electrical Engineer">Engenheiro
+                        Eletricista</h2>
+                    <p class="hero__desc"
+                        data-pt="Formado em Engenharia Elétrica pela Universidade de Brasília, interessado por tecnologias emergentes e inovação. Proativo e motivado, busco oportunidades que desafiem minhas habilidades técnicas e promovam crescimento profissional."
+                        data-en="Electrical Engineering graduate from the University of Brasília, interested in emerging technologies and innovation. Proactive and motivated, seeking opportunities that challenge my technical skills and promote professional growth.">
+                        Formado em Engenharia Elétrica pela Universidade de Brasília, interessado por tecnologias
+                        emergentes e inovação. Proativo e motivado, busco oportunidades que desafiem minhas habilidades
+                        técnicas e promovam crescimento profissional.</p>
+                    <div class="hero__cta">
+                        <a href="#resume" class="btn btn--primary" data-pt="Ver Currículo" data-en="View Resume">Ver
+                            Currículo</a>
+                        <a href="#contact" class="btn btn--outline" data-pt="Contato" data-en="Contact">Contato</a>
+                    </div>
+                    <div class="hero__socials">
+                        <a href="https://github.com/mateus1603" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mateus-marques-pinto-308a1423a/" target="_blank"
+                            rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:mateusmarquespinto@gmail.com" aria-label="Email"><i
+                                class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero__image animate-on-scroll">
+                    <div class="hero__image-wrapper">
+                        <img src="https://avatars.githubusercontent.com/u/112178248?v=4"
+                            alt="Foto de Mateus Marques Pinto" width="320" height="320" loading="eager" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
+                <div class="about__grid animate-on-scroll">
+                    <div class="about__card">
+                        <h3 data-pt="Formação" data-en="Education"><i class="fa-solid fa-graduation-cap"></i> Formação
+                        </h3>
+                        <p data-pt="Bacharelado em Engenharia Elétrica — Universidade de Brasília (2018 – 2025)"
+                            data-en="Bachelor's in Electrical Engineering — University of Brasília (2018 – 2025)">
+                            Bacharelado em Engenharia Elétrica — Universidade de Brasília (2018 – 2025)</p>
+                    </div>
+                    <div class="about__card">
+                        <h3 data-pt="Experiência Atual" data-en="Current Role"><i class="fa-solid fa-briefcase"></i>
+                            Experiência Atual</h3>
+                        <p data-pt="Estagiário de Novas Soluções em Eletrificação — AXIA Energia. Gestão de contratos com transmissoras e desenvolvimento de algoritmos para cálculo de tributos e garantias."
+                            data-en="New Electrification Solutions Intern — AXIA Energia. Contract management with transmission companies and algorithm development for tax and guarantee calculations.">
+                            Estagiário de Novas Soluções em Eletrificação — AXIA Energia. Gestão de contratos com
+                            transmissoras e desenvolvimento de algoritmos para cálculo de tributos e garantias.</p>
+                    </div>
+                    <div class="about__card">
+                        <h3 data-pt="Eletrobras Eletronorte" data-en="Eletrobras Eletronorte"><i
+                                class="fa-solid fa-chart-line"></i> Eletrobras Eletronorte</h3>
+                        <p data-pt="Estagiário de Relacionamento com Clientes (2024 – 2025). Dashboards de análise de dados, estratégias de captação de clientes e aplicações para otimização de processos."
+                            data-en="Customer Relations Intern (2024 – 2025). Data analysis dashboards, customer acquisition strategies, and process optimization applications.">
+                            Estagiário de Relacionamento com Clientes (2024 – 2025). Dashboards de análise de dados,
+                            estratégias de captação de clientes e aplicações para otimização de processos.</p>
+                    </div>
+                    <div class="about__card">
+                        <h3 data-pt="Neoenergia Brasil" data-en="Neoenergia Brasil"><i class="fa-solid fa-bolt"></i>
+                            Neoenergia Brasil</h3>
+                        <p data-pt="Estagiário de Medição e Monitoramento (2022 – 2024). Automação, análise de dados, monitoramento no ambiente ACL e modernização da contabilização de energia."
+                            data-en="Measurement &amp; Monitoring Intern (2022 – 2024). Automation, data analysis, ACL environment monitoring, and energy accounting modernization.">
+                            Estagiário de Medição e Monitoramento (2022 – 2024). Automação, análise de dados,
+                            monitoramento no ambiente ACL e modernização da contabilização de energia.</p>
+                    </div>
+                    <div class="about__card">
+                        <h3 data-pt="Câmara dos Deputados" data-en="Chamber of Deputies"><i
+                                class="fa-solid fa-building-columns"></i> Câmara dos Deputados</h3>
+                        <p data-pt="Estagiário de Engenharia Elétrica (2022). Gestão de recursos audiovisuais para transmissão televisiva."
+                            data-en="Electrical Engineering Intern (2022). Audiovisual resource management for TV broadcasting.">
+                            Estagiário de Engenharia Elétrica (2022). Gestão de recursos audiovisuais para transmissão
+                            televisiva.</p>
+                    </div>
+                    <div class="about__card">
+                        <h3 data-pt="Extracurricular" data-en="Extracurricular"><i class="fa-solid fa-car"></i>
+                            Extracurricular</h3>
+                        <p data-pt="Membro Trainee — Piratas do Cerrado (Baja SAE), UnB (2022). Implementação do painel e chicote elétrico de veículo off-road."
+                            data-en="Trainee Member — Piratas do Cerrado (Baja SAE), UnB (2022). Dashboard and wiring harness implementation for off-road vehicles.">
+                            Membro Trainee — Piratas do Cerrado (Baja SAE), UnB (2022). Implementação do painel e
+                            chicote elétrico de veículo off-road.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll" data-pt="Habilidades" data-en="Skills">Habilidades</h2>
+                <div class="skills__grid animate-on-scroll">
+
+                    <!-- Programação -->
+                    <div class="skill-group">
+                        <h3 data-pt="Programação" data-en="Programming"><i class="fa-solid fa-code"></i> Programação
+                        </h3>
+                        <div class="skill-group__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">API</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">HTML / CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Ferramentas -->
+                    <div class="skill-group">
+                        <h3 data-pt="Ferramentas &amp; Softwares" data-en="Tools &amp; Software"><i
+                                class="fa-solid fa-wrench"></i> Ferramentas &amp; Softwares</h3>
+                        <div class="skill-group__tags">
+                            <span class="tag">Excel</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">VS Code</span>
+                            <span class="tag">Jupyter</span>
+                            <span class="tag">AutoCAD</span>
+                            <span class="tag">SolidWorks</span>
+                            <span class="tag">SketchUp</span>
+                            <span class="tag">Logisim</span>
+                        </div>
+                    </div>
+
+                    <!-- Idiomas -->
+                    <div class="skill-group">
+                        <h3 data-pt="Idiomas" data-en="Languages"><i class="fa-solid fa-language"></i> Idiomas</h3>
+                        <div class="skill-group__tags">
+                            <span class="tag" data-pt="Português — Nativo" data-en="Portuguese — Native">Português —
+                                Nativo</span>
+                            <span class="tag" data-pt="Inglês — Avançado" data-en="English — Advanced">Inglês —
+                                Avançado</span>
+                            <span class="tag" data-pt="Francês — Básico" data-en="French — Basic">Francês —
+                                Básico</span>
+                            <span class="tag" data-pt="Espanhol — Básico" data-en="Spanish — Basic">Espanhol —
+                                Básico</span>
+                        </div>
+                    </div>
+
+                    <!-- Certificações -->
+                    <div class="skill-group">
+                        <h3 data-pt="Certificações" data-en="Certifications"><i class="fa-solid fa-certificate"></i>
+                            Certificações</h3>
+                        <div class="skill-group__tags">
+                            <span class="tag" data-pt="ANEEL — Fundamentos do Setor Elétrico"
+                                data-en="ANEEL — Power Sector Fundamentals">ANEEL — Fundamentos do Setor Elétrico</span>
+                            <span class="tag" data-pt="CCEE — Primeiros Passos no Setor Elétrico"
+                                data-en="CCEE — First Steps in the Power Sector">CCEE — Primeiros Passos no Setor
+                                Elétrico</span>
+                            <span class="tag">Huawei HCIA-5G</span>
+                            <span class="tag" data-pt="LinkedIn — Fundamentos de Programação"
+                                data-en="LinkedIn — Programming Foundations">LinkedIn — Fundamentos de
+                                Programação</span>
+                            <span class="tag" data-pt="LinkedIn — Técnicas Avançadas de Python"
+                                data-en="LinkedIn — Advanced Python Techniques">LinkedIn — Técnicas Avançadas de
+                                Python</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="section projects" id="projects">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll" data-pt="Projetos" data-en="Projects">Projetos</h2>
+                <p class="section__subtitle animate-on-scroll" data-pt="Uma seleção de projetos nos quais trabalhei."
+                    data-en="A selection of projects I've worked on.">Uma seleção de projetos nos quais trabalhei.</p>
+
+                <div class="projects__grid animate-on-scroll">
+
+                    <!-- Projeto 1 — Placeholder -->
+                    <article class="project-card">
+                        <div class="project-card__header">
+                            <i class="fa-solid fa-folder-open project-card__icon"></i>
+                            <div class="project-card__links">
+                                <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Demo"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-card__title" data-pt="Nome do Projeto 1" data-en="Project Name 1">Nome do
+                            Projeto 1</h3>
+                        <p class="project-card__desc"
+                            data-pt="Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto."
+                            data-en="Brief project description. Replace this text with your actual project description.">
+                            Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto.</p>
+                        <div class="project-card__tags">
+                            <span class="tag tag--small">Python</span>
+                            <span class="tag tag--small">API</span>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 — Placeholder -->
+                    <article class="project-card">
+                        <div class="project-card__header">
+                            <i class="fa-solid fa-folder-open project-card__icon"></i>
+                            <div class="project-card__links">
+                                <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Demo"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-card__title" data-pt="Nome do Projeto 2" data-en="Project Name 2">Nome do
+                            Projeto 2</h3>
+                        <p class="project-card__desc"
+                            data-pt="Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto."
+                            data-en="Brief project description. Replace this text with your actual project description.">
+                            Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto.</p>
+                        <div class="project-card__tags">
+                            <span class="tag tag--small">C++</span>
+                            <span class="tag tag--small">Git</span>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 — Placeholder -->
+                    <article class="project-card">
+                        <div class="project-card__header">
+                            <i class="fa-solid fa-folder-open project-card__icon"></i>
+                            <div class="project-card__links">
+                                <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Demo"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-card__title" data-pt="Nome do Projeto 3" data-en="Project Name 3">Nome do
+                            Projeto 3</h3>
+                        <p class="project-card__desc"
+                            data-pt="Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto."
+                            data-en="Brief project description. Replace this text with your actual project description.">
+                            Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto.</p>
+                        <div class="project-card__tags">
+                            <span class="tag tag--small">Power BI</span>
+                            <span class="tag tag--small">Excel</span>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 4 — Placeholder -->
+                    <article class="project-card">
+                        <div class="project-card__header">
+                            <i class="fa-solid fa-folder-open project-card__icon"></i>
+                            <div class="project-card__links">
+                                <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Demo"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-card__title" data-pt="Nome do Projeto 4" data-en="Project Name 4">Nome do
+                            Projeto 4</h3>
+                        <p class="project-card__desc"
+                            data-pt="Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto."
+                            data-en="Brief project description. Replace this text with your actual project description.">
+                            Breve descrição do projeto. Substitua este texto pela descrição real do seu projeto.</p>
+                        <div class="project-card__tags">
+                            <span class="tag tag--small">MySQL</span>
+                            <span class="tag tag--small">Python</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RESUME ===== -->
+        <section class="section resume" id="resume">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll" data-pt="Currículo" data-en="Resume">Currículo</h2>
+                <div class="resume__content animate-on-scroll">
+                    <div class="resume__preview">
+                        <iframe src="assets/Curriculo_Mateus_Marques_Pinto.pdf" title="Currículo Mateus Marques Pinto"
+                            class="resume__iframe"></iframe>
+                    </div>
+                    <div class="resume__actions">
+                        <a href="assets/Curriculo_Mateus_Marques_Pinto.pdf" download class="btn btn--primary">
+                            <i class="fa-solid fa-download"></i>
+                            <span data-pt="Baixar Currículo" data-en="Download Resume">Baixar Currículo</span>
+                        </a>
+                        <a href="assets/Curriculo_Mateus_Marques_Pinto.pdf" target="_blank" rel="noopener"
+                            class="btn btn--outline">
+                            <i class="fa-solid fa-eye"></i>
+                            <span data-pt="Visualizar em Nova Aba" data-en="View in New Tab">Visualizar em Nova
+                                Aba</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll" data-pt="Contato" data-en="Contact">Contato</h2>
+                <p class="section__subtitle animate-on-scroll"
+                    data-pt="Tem uma pergunta ou quer trabalhar junto? Me envie uma mensagem!"
+                    data-en="Have a question or want to work together? Send me a message!">Tem uma pergunta ou quer
+                    trabalhar junto? Me envie uma mensagem!</p>
+
+                <div class="contact__grid animate-on-scroll">
+                    <form class="contact__form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-pt="Nome" data-en="Name">Nome</label>
+                            <input type="text" id="name" name="name" required autocomplete="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-pt="E-mail" data-en="Email">E-mail</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-pt="Mensagem" data-en="Message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</span>
+                        </button>
+                    </form>
+
+                    <div class="contact__info">
+                        <div class="contact__info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:mateusmarquespinto@gmail.com">mateusmarquespinto@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact__info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4 data-pt="Telefone" data-en="Phone">Telefone</h4>
+                                <a href="tel:+5561992639743">(61) 99263-9743</a>
+                            </div>
+                        </div>
+                        <div class="contact__info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4 data-pt="Localização" data-en="Location">Localização</h4>
+                                <p>Brasília, DF — Brasil</p>
+                            </div>
+                        </div>
+                        <div class="contact__socials">
+                            <a href="https://github.com/mateus1603" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mateus-marques-pinto-308a1423a/" target="_blank"
+                                rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:mateusmarquespinto@gmail.com" aria-label="Email"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p data-pt="&copy; 2026 Mateus Marques Pinto. Todos os direitos reservados."
+                data-en="&copy; 2026 Mateus Marques Pinto. All rights reserved.">&copy; 2026 Mateus Marques Pinto. Todos
+                os direitos reservados.</p>
+            <div class="footer__links">
+                <a href="https://github.com/mateus1603" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mateus-marques-pinto-308a1423a/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:mateusmarquespinto@gmail.com" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
