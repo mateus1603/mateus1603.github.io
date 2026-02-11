@@ -681,6 +681,29 @@ ul { list-style: none; }
   transform: translateY(-3px);
 }
 
+/* LinkedIn Profile Badge */
+.linkedin-badge-wrapper {
+  margin-top: var(--space-lg);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.linkedin-badge--light {
+  display: block;
+}
+
+.linkedin-badge--dark {
+  display: none;
+}
+
+[data-theme="dark"] .linkedin-badge--light {
+  display: none;
+}
+
+[data-theme="dark"] .linkedin-badge--dark {
+  display: block;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
