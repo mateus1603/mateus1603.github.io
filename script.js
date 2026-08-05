@@ -206,17 +206,4 @@
     window.location.href = mailtoLink;
   });
 
-  /* ============================================================
-     8. SMOOTH SCROLL FOR ANCHOR LINKS (fallback)
-     ============================================================ */
-  $$('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = $(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
 })();
